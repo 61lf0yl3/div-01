@@ -1,0 +1,1 @@
+Write a program called ztail that has the same behaviour as the system command tail, but which takes at least one file as argument.
