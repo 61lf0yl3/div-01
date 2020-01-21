@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	str := "The earliest foundations of what would become computer science predate the invention of the modern digital computer"
+	str := "The earliest foundations of what 	wou	ld become \ncomp\nuter science predate the invention of the modern digital computer"
 	fmt.Println(SplitWhiteSpaces(str))
 	fmt.Println()
 	str = "Machines for calculating fixed numerical tasks such as the abacus have existed since antiquity,"

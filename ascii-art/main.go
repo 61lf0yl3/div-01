@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"strings"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -42,28 +39,32 @@ func main() {
 			res = ""
 		}
 	}
-	for _, l2 := range strings.Split(args, "\\n") {
-		for i1 := 0; i1 < 8; i1++ {
-			for _, l3 := range l2 {
-				PrintLine(m[l3], i1)
-			}
-			z01.PrintRune(10)
-		}
-	}
+	fmt.Println(m)
 }
-func PrintLine(maps string, line int) {
-	counter := 0
-	for _, l3 := range maps {
-		if l3 == '\n' {
-			counter++
-		}
-		if counter > line {
-			return
-		}
-		if counter == line {
-			if l3 != '\n' {
-				z01.PrintRune(l3)
-			}
-		}
-	}
-}
+
+// 	for _, l2 := range strings.Split(args, "\\n") {
+// 		for i1 := 0; i1 < 8; i1++ {
+// 			for _, l3 := range l2 {
+// 				PrintLine(m[l3], i1)
+// 			}
+// 			z01.PrintRune(10)
+// 		}
+// 		//z01.PrintRune(10)
+// 	}
+// }
+// func PrintLine(maps string, line int) {
+// 	counter := 0
+// 	for _, l3 := range maps {
+// 		if l3 == '\n' {
+// 			counter++
+// 		}
+// 		if counter > line {
+// 			return
+// 		}
+// 		if counter == line {
+// 			if l3 != '\n' {
+// 				z01.PrintRune(l3)
+// 			}
+// 		}
+// 	}
+// }

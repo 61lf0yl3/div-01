@@ -77,7 +77,8 @@ func main() {
 	z01.PrintRune('\n')
 	PrintNbrBase(125, "-ab")
 	z01.PrintRune('\n')
-	PrintNbrBase(-9223372036854775808, "0123456789")
+	PrintNbrBase(-9223372036854775808, "01")
 	z01.PrintRune('\n')
-
+	PrintNbrBase(0, "01")
+	z01.PrintRune('\n')
 }

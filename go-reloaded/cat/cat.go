@@ -30,7 +30,7 @@ func main() {
 				err := "cat: " + args[i] + ": No such file or directory"
 				Println(err)
 				z01.PrintRune(10)
-				return
+
 			}
 			Println(string(data))
 		}

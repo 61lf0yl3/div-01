@@ -4,21 +4,21 @@ import "fmt"
 
 func main() {
 
-	root := &TreeNode{Data: "01"}
-	BTreeInsertData(root, "07")
-	BTreeInsertData(root, "05")s
-	BTreeInsertData(root, "12")
-	BTreeInsertData(root, "10")
-	BTreeInsertData(root, "02")
-	BTreeInsertData(root, "03")
-	node := BTreeSearchItem(root, "12")
-	replacement := &TreeNode{Data: "55"}
-	BTreeInsertData(replacement, "60")
-	BTreeInsertData(replacement, "33")
-	BTreeInsertData(replacement, "12")
-	BTreeInsertData(replacement, "15")
-	root = BTreeTransplant(root, node, replacement)
-	BTreeApplyInorder(root, fmt.Println)
+	// root := &TreeNode{Data: "01"}
+	// BTreeInsertData(root, "07")
+	// BTreeInsertData(root, "05")
+	// BTreeInsertData(root, "12")
+	// BTreeInsertData(root, "10")
+	// BTreeInsertData(root, "02")
+	// BTreeInsertData(root, "03")
+	// node := BTreeSearchItem(root, "12")
+	// replacement := &TreeNode{Data: "55"}
+	// BTreeInsertData(replacement, "60")
+	// BTreeInsertData(replacement, "33")
+	// BTreeInsertData(replacement, "12")
+	// BTreeInsertData(replacement, "15")
+	// root = BTreeTransplant(root, node, replacement)
+	// BTreeApplyInorder(root, fmt.Println)
 
 	// 01
 	// 02
@@ -56,21 +56,21 @@ func main() {
 	// 5
 	// 52
 
-	// root := &TreeNode{Data: "03"}
-	// BTreeInsertData(root, "39")
-	// BTreeInsertData(root, "99")
-	// BTreeInsertData(root, "44")
-	// BTreeInsertData(root, "11")
-	// BTreeInsertData(root, "14")
-	// BTreeInsertData(root, "11")
-	// node := BTreeSearchItem(root, "11")
-	// replacement := &TreeNode{Data: "55"}
-	// BTreeInsertData(replacement, "60")
-	// BTreeInsertData(replacement, "33")
-	// BTreeInsertData(replacement, "12")
-	// BTreeInsertData(replacement, "15")
-	// root = BTreeTransplant(root, node, replacement)
-	// BTreeApplyInorder(root, fmt.Println)
+	root := &TreeNode{Data: "01"}
+	BTreeInsertData(root, "07")
+	BTreeInsertData(root, "12")
+	BTreeInsertData(root, "05")
+	BTreeInsertData(root, "10")
+	BTreeInsertData(root, "02")
+	BTreeInsertData(root, "03")
+	node := BTreeSearchItem(root, "12")
+	replacement := &TreeNode{Data: "55"}
+	BTreeInsertData(replacement, "60")
+	BTreeInsertData(replacement, "33")
+	BTreeInsertData(replacement, "12")
+	BTreeInsertData(replacement, "15")
+	root = BTreeTransplant(root, node, replacement)
+	BTreeApplyInorder(root, fmt.Println)
 
 	// 03
 	// 12

@@ -84,7 +84,7 @@ func main() {
 	ListPushBack(c, 33)
 
 	PrintList(c)
-	ListRemoveIf(c, 34)
+	ListRemoveIf(c, 33)
 	fmt.Println("------answer-----")
 	PrintList(c)
 	fmt.Println()
