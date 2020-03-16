@@ -1,0 +1,84 @@
+
+
+ 
+body{
+    margin:auto;
+    width:100%;
+    background: #FFFFFF;
+    background-image: url(desk.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+h1 {
+    text-align: center;
+    font-family: Roboto;
+    color: #878882;
+}
+h1:hover {
+    background-color:#071108;
+}
+form {
+    margin: auto;
+    width: 30%;
+}
+
+textarea, select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 18px;
+color: rgba(51, 50, 50, 0.64);
+
+}
+input[type=submit] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+display: flex;
+align-items: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+#output {
+    text-align: center;
+    font-family: monospace;
+    overflow: auto;
+    color: rgba(51, 50, 50, 0.64);
+}
+pre {
+    text-align: center;
+    font-family: monospace;
+    overflow: auto;
+    color: rgba(51, 50, 50, 0.64);
+}
+@media only screen and (max-width: 480px) {
+    textarea, select {
+        margin: auto;
+        text-align: center;
+        font-size: medium;
+        width: 120px;
+    }
+    input[type=submit]{
+        font-size: small;
+        width: 120px;
+    }
+}     
