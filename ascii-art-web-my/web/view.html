@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+<div id="input">
+    <h1>ASCII art web</h1>
+    
+    <form action="/save/{{.Printtype}}" method="POST">
+        <!-- input -->
+        <div id="input">  
+            <textarea name="input" rows="1" cols="40">{{printf "%s" .Input}}</textarea>
+        </div>
+        <div id="input">  
+            <select name="printtype" {{.Printtype}}>
+                <option value="standard">standard</option>
+                <option value="shadow">shadow</option>
+                <option value="thinkertoy">thinkertoy</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+    <form action="" id="output">
+        <!-- output -->
+        <br><br>
+        <pre>{{printf "%s" .Output}}</pre>
+        </div>
+    </form>
+</body>
+</html>
+
+<style>
+    input{
+        margin:0 25% 0 25%;
+        width:50%;
+        background: #FFFFFF;
+    }
+
+    h1 {
+        margin:50px 25% 0 30%;
+        font-family: Roboto;
+        color: #878882;
+    }
+    form {
+        margin: 20px 15% 0 15%;
+    }
+
+    textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 18px;
+    color: rgba(51, 50, 50, 0.64);
+
+    }
+    input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    }
+
+    #output {
+        margin:0 15% 0 15% ;
+        font-family: monospace;
+        overflow: auto;
+        color: rgba(51, 50, 50, 0.64);
+    }
+</style>

@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    margin:0 25% 0 25%;
+    width:50%;
+    background: #FFFFFF;
+}
+
+h1 {
+    margin:50px 15% 50px 15%;
+    font-family: Roboto;
+    line-height: 50px;
+    color: #878882;
+}
+div {
+    margin: 8px 0 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 18px;
+    color: rgba(51, 50, 50, 0.64);
+}
+a {
+    margin:auto;
+    text-align: center;
+}
