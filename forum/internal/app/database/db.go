@@ -4,5 +4,5 @@ import "database/sql"
 
 // Database ....
 type Database struct {
-	db *sql.DB
+	DB *sql.DB
 }

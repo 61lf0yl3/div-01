@@ -8,6 +8,9 @@ func (d *Database) InitDB(dbName string) error {
 	if err != nil {
 		return err
 	}
-	d.db = db
+	if err := db.Ping(); err != nil {
+		return err
+	}
+	d.DB = db
 	return nil
 }
