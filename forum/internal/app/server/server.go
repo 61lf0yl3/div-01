@@ -16,20 +16,20 @@ type Server struct {
 func Start() error {
 
 	s := Server{}
+	s.connect = &handlers.Connect{}
 
 	if err := s.connect.Database.InitDB("forum.db"); err != nil {
 		log.Println(err)
 		return err
 	}
 
-	s.configureRouter()
+	s.startHandlers()
 
 	log.Println("server started succefully")
 	return http.ListenAndServe(":8001", nil)
 }
 
-func (s *Server) configureRouter() {
+func (s *Server) startHandlers() {
 	http.HandleFunc("/", s.connect.MainHandler)
 	http.HandleFunc("/signup", s.connect.SignupHandler)
-	http.HandleFunc("/usercreate", s.connect.UserCreateHandler)
 }
