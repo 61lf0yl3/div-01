@@ -3,16 +3,27 @@ package handlers
 import (
 	"regexp"
 
+	"github.com/61lf0yl3/div-01/forum/internal/models"
 )
 
 var (
-	regEmail    = regexp.MustCompile("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)])")
-	regName     = regexp.Compile("")
-	regPwd      = regexp.Compile("")
-	regUsername = regexp.Compile("")
+	regName     = regexp.MustCompile("^([A-Za-z])+$")
+	regUsername = regexp.MustCompile("^[a-zA-Z0-9]{3,20}$")
+	regEmail    = regexp.MustCompile("^[a-zA-Z0-9.]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")
+	regPwd      = regexp.MustCompile("^[#\\w$&+,:;=?@#|'<>.-^*()%!]{8,20}")
 )
 
-func validateInput(user *models.User, confirmpwd string) bool {
+func ValidateInput(user *models.User, confirmpwd string) string {
 
-	return true
+	if !regUsername.MatchString(user.Username) {
+		return user.Username
+	}
+	if !regEmail.MatchString(user.Email) {
+		return user.Email
+	}
+	if !regPwd.MatchString(user.Password) {
+		return user.Password
+	}
+
+	return "filled correctly"
 }

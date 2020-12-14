@@ -8,7 +8,7 @@ type User struct {
 	Password string
 }
 
-// // NewUser ...
-// func NewUser() *User {
-// 	return &User{}
-// }
+// NewUser ...
+func NewUser() *User {
+	return &User{}
+}

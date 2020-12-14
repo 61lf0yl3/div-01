@@ -31,8 +31,10 @@ func (c *Connect) SignupHandler(w http.ResponseWriter, r *http.Request) {
 			Email:    r.PostFormValue("email"),
 			Password: r.PostFormValue("password"),
 		}
-		// var confirmPwd string = req.PostFormValue("confirpwd")
-		// if ok := validteInput(newUser, confirmPwd); !ok {
-		// }
+		var confirmPwd string = r.PostFormValue("confirpwd")
+		if ValidateInput(newUser, confirmPwd) != "filled correctly" {
+			// if input not validated then show to the front for user
+		}
+		if  err := c.Database.DB.
 	}
 }
