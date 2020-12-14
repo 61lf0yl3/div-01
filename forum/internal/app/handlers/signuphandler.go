@@ -16,7 +16,7 @@ func (c *Connect) SignupHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if r.Method == "POST" {
+	if r.Method == "GET" {
 		template, err := template.ParseFiles("templates/signup.html")
 		if err != nil {
 			log.Println(err)
