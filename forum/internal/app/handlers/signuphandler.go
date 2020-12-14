@@ -35,6 +35,6 @@ func (c *Connect) SignupHandler(w http.ResponseWriter, r *http.Request) {
 		if ValidateInput(newUser, confirmPwd) != "filled correctly" {
 			// if input not validated then show to the front for user
 		}
-		if  err := c.Database.DB.
+		//if  err := c.Database.DB.
 	}
 }

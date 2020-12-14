@@ -16,7 +16,7 @@ type Server struct {
 func Start() error {
 
 	s := Server{}
-	s.connect = &handlers.Connect{}
+	s.connect = handlers.Connect{}
 
 	if err := s.connect.Database.InitDB("forum.db"); err != nil {
 		log.Println(err)
