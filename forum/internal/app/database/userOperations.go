@@ -2,6 +2,7 @@ package database
 
 // InsertData ...
 func (d *Database) InsertData() {
+	d.DB.Exec()
 	//d.db.Exec()
 }
 
