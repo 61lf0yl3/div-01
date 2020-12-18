@@ -8,6 +8,5 @@ func (d *Database) InsertData() {
 
 // GetUserBySession ...
 func (d *Database) GetUserBySession(session string) error {
-
 	return nil
 }
